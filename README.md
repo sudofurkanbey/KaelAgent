@@ -1,69 +1,73 @@
 # KaelAgent
 
-🚀 **GPT-4 Tabanlı Terminal Ajanı – Flutter Geliştiricileri İçin**
+🚀 **GPT-4 Powered Terminal Agent – For Flutter Developers**
 
-KaelAgent, Flutter projelerinde hata tespiti, debug analizi ve opsiyonel düzeltme işlemlerini yapabilen otonom bir terminal tabanlı ajan sistemidir. GPT-4 destekli bu yapı, geliştiricilerin CLI üzerinden hızlıca geri bildirim almasını sağlar.
+KaelAgent is an autonomous CLI-based agent designed to analyze and optionally fix build/runtime issues in Flutter projects. Built on GPT-4, it empowers developers with smart debugging capabilities directly in the terminal.
 
----
+## 🧠 Features
 
-## 🧠 Özellikler
+- Identifies build and runtime errors in Flutter projects  
+- Suggests or automatically applies fixes *(fail-safe mode supported)*  
+- Goes beyond reporting – capable of taking action  
+- Lightweight and terminal-friendly execution  
+- Targets only the necessary parts of the code without breaking structure  
 
-- Flutter projelerinde derleme ve çalışma zamanı hatalarını tanımlar
-- İsteğe bağlı olarak hata düzeltmeleri önerir ya da doğrudan yapar *(fail-safe modu desteklenir)*
-- Geliştiriciye sadece bilgi vermekle kalmaz, aynı zamanda aksiyon alır
-- Basit komutlarla terminalden çalıştırılır
-- Dosya içeriğini bozmadan sadece gerekli yerleri düzenlemeyi hedefler
+## 🔧 Current Usage (Experimental Phase)
 
----
+> This project is under **active development** and currently intended for **personal use only**. Core modules are not fully released yet.
 
-## 🔧 Kullanım Durumu (Başlangıç Aşaması)
+- Run `kael_agent.py` (or `main.py`) to initiate CLI control  
+- Once the target project directory is set, it analyzes `flutter pub get`, `flutter run`, and `flutter doctor` outputs  
+- Errors are parsed and suggestions/fixes are offered interactively  
 
-> Bu proje hâlâ deneyseldir ve **sadece kişisel kullanım** içindir. Kodlar henüz tam anlamıyla yayımlanmamıştır.
+## 📦 Installation (coming soon)
 
-- `kael_agent.py` (veya `main.py`) dosyasını çalıştırarak CLI üzerinden terminal içi kontrol başlatılır
-- Hedef proje dizini belirtildikten sonra `flutter pub get`, `flutter run`, `flutter doctor` çıktıları analiz edilir
-- Algılanan hatalar için kullanıcıya düzeltme önerilir
-
----
-
-## 📦 Kurulum (yakında)
-
-```
-git clone https://github.com/sudofurkanbey/KaelAgent.git
-cd KaelAgent
+```bash
+git clone https://github.com/sudofurkanbey/KaelAgent.git  
+cd KaelAgent  
 python kael_agent.py
 ```
 
----
-
-## 📁 Planlanan Yapı
+## 📁 Planned Structure
 
 ```
 KaelAgent/
-├── kael_agent.py            # Ana ajan betiği
+├── kael_agent.py            # Main agent script
 ├── modules/
-│   ├── analyzer.py          # Hata analiz motoru
-│   ├── fixer.py             # Otomatik düzeltici modül
-│   └── reporter.py          # Sonuç raporu oluşturucu
+│   ├── analyzer.py          # Error analysis engine
+│   ├── fixer.py             # Auto-fix module
+│   └── reporter.py          # Summary and report handler
 ├── configs/
-│   └── settings.json        # Ajan konfigürasyon ayarları
+│   └── settings.json        # Agent configuration
 ├── .gitignore
 └── README.md
 ```
 
----
+## ⚙️ Requirements
 
-## ⚠️ Uyarı
+- Python 3.10+  
+- Flutter SDK (configured in environment)  
+- OpenAI API Key (for GPT-4 access)  
+- Unix-based system recommended (Linux/macOS)
 
-- Ajan, gerçek projelere uygulanmadan önce izole test dizinlerinde denenmelidir.
-- Geliştirme hâlindedir. Kodlar paylaşıldıkça `Issues` ve `Pull Request` kısmı aktif hale gelecektir.
+## 🗺 Roadmap
 
----
+- [x] Basic terminal output parsing  
+- [ ] Modular error classifier  
+- [ ] Interactive fix suggestion UI (CLI prompts)  
+- [ ] Fail-safe execution mode (no changes unless confirmed)  
+- [ ] Self-improvement loop (learning from past errors)  
+- [ ] GitHub Actions integration  
+- [ ] Community support & plugin ecosystem  
 
-## ✍️ Katkı ve Lisans
+## ⚠️ Disclaimer
 
-> Proje şu an **özel** ve katkıya kapalıdır. Daha sonra açık hale geldiğinde lisans bilgisi eklenecektir.
+- Run the agent **in isolated environments first**. It is not production-tested.  
+- This tool is experimental. Errors may occur.  
+- Contribution and feedback will open once the first stable release is live.
 
----
+## ✍️ Contribution & License
 
-🧬 **Kodla, boz, düzelt, öğren. KaelAgent her zaman yanında.**
+> Currently **private**. License and contribution guidelines will be added in future releases.
+
+🧬 **Code. Break. Fix. Learn. – KaelAgent is always by your side.**
