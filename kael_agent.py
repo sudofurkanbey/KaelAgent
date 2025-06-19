@@ -1,7 +1,11 @@
 import os
 import openai
+from dotenv import load_dotenv
 
-# Load OpenAI API key from environment variable
+# Load .env file
+load_dotenv()
+
+# Get API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 print("\n🔁 KaelAgent v0.3 has started.")
