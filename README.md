@@ -42,6 +42,11 @@ KaelAgent/
 ├── .gitignore
 └── README.md
 ```
+## 🔐 Environment Setup
+
+This project uses a `.env` file to store sensitive information like your OpenAI API key.
+
+1. Create a `.env` file in the root directory:
 
 ## ⚙️ Requirements
 
