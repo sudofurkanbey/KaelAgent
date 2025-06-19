@@ -48,6 +48,10 @@ This project uses a `.env` file to store sensitive information like your OpenAI 
 
 1. Create a `.env` file in the root directory:
 
+2. Install the required Python package:
+
+3. Make sure `.env` is included in your `.gitignore` file.
+
 ## ⚙️ Requirements
 
 - Python 3.10+  
